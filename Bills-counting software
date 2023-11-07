@@ -1,0 +1,45 @@
+#include <stdio.h> 
+#include <string>
+#include <iostream>
+#include <iomanip>
+using namespace std;
+/**
+ * The PoudelProg04B.cpp program implements the following applications:
+ * programming exercise 04B will convert and display how many 20s, 10s, 5s and 1s dollar bills are on entered amount.
+ * 
+ * @filename: PoudelProg04B.cpp
+ * @author: Anup Poudel 
+ * @version 1.0
+ * @since 10/29/2023
+ **/
+
+
+int main(){
+    int hmany20, hmany10, hmany5, hmany1;
+    float dollarAmt;
+    
+    cout<<"Following Programming will take a amount as input and convert it to show how many 20s, 10s, 5s and 1s dollar bills are on entered amount " <<endl <<endl;
+    
+    cout << "Enter the dollar amount: " ;
+    cin >> dollarAmt;
+    cout << ""<<endl;
+    hmany20 = dollarAmt / 20;
+    int rAfter20 = (int)dollarAmt % 20;
+    
+    hmany10 = rAfter20 / 10;
+    int rAfter10 = rAfter20 % 10;
+    
+    hmany5 = rAfter10 / 5;
+    int rAfter5 = rAfter10 % 5;
+    
+    hmany1 = rAfter5;
+    
+    cout << "Twenty Dollar Bills: " << hmany20 << endl;
+    cout << "Ten Dollar Bills   : " << hmany10 << endl;
+    cout << "Five Dollar Bills  : " << hmany5 << endl;
+    cout << "One Dollar Bills   : " << hmany1 << endl<<endl;
+    
+    cout << "In $" << dollarAmt << " Total 20$, 10$, 5$ and 1$ Bills are\n" << hmany20 << "," << hmany10 << "," << hmany5 << " and " << hmany1 << " respectively." << endl;
+    
+    return 0;
+}
